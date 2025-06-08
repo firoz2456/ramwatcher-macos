@@ -25,9 +25,12 @@ xcuserdata/
 Package.resolved
 
 # Build outputs
+build/
 *.app
-*.dmg
 *.zip
+
+# Allow releases folder DMGs
+!releases/*.dmg
 
 # Temporary files
 *.swp

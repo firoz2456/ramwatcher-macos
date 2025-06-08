@@ -72,7 +72,9 @@ Click the menu bar item to view:
 
 ### Option 1: Download Pre-built App (Recommended)
 
-1. **Download the DMG**: Go to the [Releases page](https://github.com/firoz2456/ramwatcher-macos/releases) and download the latest `RAMWatcher.dmg` file
+1. **Download the DMG**: 
+   - **Quick Download**: [RAMWatcher-v1.0.0.dmg](releases/RAMWatcher-v1.0.0.dmg) (89KB)
+   - **All Releases**: [GitHub Releases page](https://github.com/firoz2456/ramwatcher-macos/releases)
 
 2. **Open the DMG**: Double-click the downloaded `RAMWatcher.dmg` file to mount it
 
