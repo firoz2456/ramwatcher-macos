@@ -4,6 +4,26 @@ A lightweight, native macOS menu bar application for real-time RAM usage monitor
 
 ![RAMWatcher Screenshot](https://img.shields.io/badge/macOS-13.0+-blue) ![Swift](https://img.shields.io/badge/Swift-5.9+-orange) ![License](https://img.shields.io/badge/License-MIT-green)
 
+## 📦 Quick Download & Install
+
+### 🚀 Ready to Use - Download Now!
+
+**[⬇️ Download RAMWatcher-v1.0.0.dmg](releases/RAMWatcher-v1.0.0.dmg)** (89KB)
+
+### 📱 Installation Steps:
+1. **Download** the DMG file above
+2. **Double-click** the DMG to open it  
+3. **Drag** RAMWatcher.app to Applications folder
+4. **Launch** from Applications or Spotlight (⌘+Space)
+5. **Allow** if macOS shows security warning: System Settings → Privacy & Security → "Open Anyway"
+
+### 💻 Requirements:
+- macOS 13.0 Ventura or later
+- Intel or Apple Silicon Mac
+- 10MB disk space
+
+---
+
 ## 📸 Preview
 
 RAMWatcher appears in your menu bar showing real-time memory usage:
@@ -68,36 +88,9 @@ Click the menu bar item to view:
 | macOS 12 Monterey | ❌ Not Supported | MenuBarExtra requires 13.0+ |
 | macOS 11 Big Sur | ❌ Not Supported | MenuBarExtra requires 13.0+ |
 
-## 📦 Download & Installation
+## 🛠️ Alternative: Build from Source
 
-### Option 1: Download Pre-built App (Recommended)
-
-1. **Download the DMG**: 
-   - **Quick Download**: [RAMWatcher-v1.0.0.dmg](releases/RAMWatcher-v1.0.0.dmg) (89KB)
-   - **All Releases**: [GitHub Releases page](https://github.com/firoz2456/ramwatcher-macos/releases)
-
-2. **Open the DMG**: Double-click the downloaded `RAMWatcher.dmg` file to mount it
-
-3. **Install the App**: 
-   - Drag the `RAMWatcher.app` icon to the `Applications` folder
-   - Wait for the copy process to complete
-
-4. **Launch RAMWatcher**:
-   - Open `Applications` folder or use Spotlight search (⌘ + Space)
-   - Double-click `RAMWatcher` to launch
-   - Grant any requested permissions
-
-5. **First Launch Security**:
-   - If you see a security warning, go to `System Settings` → `Privacy & Security`
-   - Click `Open Anyway` next to the RAMWatcher warning
-   - Or right-click the app and select `Open`, then click `Open` in the dialog
-
-### Option 2: Build from Source
-
-Requirements for building:
-- Xcode 15.0 or later
-- macOS 13.0 or later
-- Swift 5.9 or later
+**For developers who want to build from source:**
 
 ```bash
 # Clone the repository
@@ -110,6 +103,8 @@ cd ramwatcher-macos
 # The built DMG will be available in the build/ directory
 open build/RAMWatcher.dmg
 ```
+
+**Requirements**: Xcode 15.0+, macOS 13.0+, Swift 5.9+
 
 ## 🚀 Usage Guide
 
