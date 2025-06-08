@@ -1,0 +1,42 @@
+import SwiftUI
+
+/// Main application entry point for RAMWatcher
+@main
+struct RAMWatcherApp: App {
+    @StateObject private var memoryMonitor = MemoryMonitor.shared
+    @StateObject private var statusItemController = StatusItemController()
+    
+    var body: some Scene {
+        // Use MenuBarExtra for macOS 13.0+ with fallback to WindowGroup for older versions
+        if #available(macOS 13.0, *) {
+            MenuBarExtra {
+                MemoryPopoverView()
+            } label: {
+                MenuBarLabel()
+            }
+            .menuBarExtraStyle(.window)
+        } else {
+            // Fallback for older macOS versions
+            WindowGroup {
+                ContentView()
+            }
+        }
+    }
+}
+
+/// MenuBar label view for macOS 13.0+
+@available(macOS 13.0, *)
+struct MenuBarLabel: View {
+    @StateObject private var memoryMonitor = MemoryMonitor.shared
+    
+    var body: some View {
+        HStack(spacing: 2) {
+            Text(memoryMonitor.stats.indicator.emoji)
+            Text("\(String(format: "%.1f", memoryMonitor.stats.usedGB))/\(String(format: "%.1f", memoryMonitor.stats.totalGB)) GB")
+                .font(.system(size: 12, weight: .medium, design: .monospaced))
+        }
+        .onAppear {
+            memoryMonitor.startMonitoring()
+        }
+    }
+}
