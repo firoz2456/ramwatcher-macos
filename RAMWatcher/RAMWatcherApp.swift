@@ -7,25 +7,16 @@ struct RAMWatcherApp: App {
     @StateObject private var statusItemController = StatusItemController()
     
     var body: some Scene {
-        // Use MenuBarExtra for macOS 13.0+ with fallback to WindowGroup for older versions
-        if #available(macOS 13.0, *) {
-            MenuBarExtra {
-                MemoryPopoverView()
-            } label: {
-                MenuBarLabel()
-            }
-            .menuBarExtraStyle(.window)
-        } else {
-            // Fallback for older macOS versions
-            WindowGroup {
-                ContentView()
-            }
+        MenuBarExtra {
+            MemoryPopoverView()
+        } label: {
+            MenuBarLabel()
         }
+        .menuBarExtraStyle(.window)
     }
 }
 
-/// MenuBar label view for macOS 13.0+
-@available(macOS 13.0, *)
+/// MenuBar label view
 struct MenuBarLabel: View {
     @StateObject private var memoryMonitor = MemoryMonitor.shared
     

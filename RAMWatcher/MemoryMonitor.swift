@@ -97,7 +97,8 @@ public class MemoryMonitor: ObservableObject {
     }
     
     deinit {
-        stopTimer()
+        timer?.invalidate()
+        timer = nil
     }
     
     /// Start periodic memory monitoring
@@ -160,7 +161,7 @@ public class MemoryMonitor: ObservableObject {
         
         let freeMemory = freePages * pageSize
         let activeMemory = activePages * pageSize
-        let inactiveMemory = inactivePages * pageSize
+        let _ = inactivePages * pageSize
         let wiredMemory = wiredPages * pageSize
         let compressedMemory = compressedPages * pageSize
         
