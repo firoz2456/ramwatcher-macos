@@ -9,6 +9,9 @@ A lightweight, native macOS menu bar application for real-time RAM usage monitor
 ### 🚀 Ready to Use - Download Now!
 
 **[⬇️ Download RAMWatcher-v1.0.0.dmg](releases/RAMWatcher-v1.0.0.dmg)** (89KB)
+![screen 1](https://github.com/user-attachments/assets/8169fe2c-ada2-42c3-afd8-011a20c076a4)
+![screen 2](https://github.com/user-attachments/assets/3fd6dbbd-498a-490d-9096-1d2accbf8f9c)
+
 
 ### 📱 Installation Steps:
 1. **Download** the DMG file above
