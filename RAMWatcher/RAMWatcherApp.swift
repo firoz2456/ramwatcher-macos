@@ -4,7 +4,6 @@ import SwiftUI
 @main
 struct RAMWatcherApp: App {
     @StateObject private var memoryMonitor = MemoryMonitor.shared
-    @StateObject private var statusItemController = StatusItemController()
     
     var body: some Scene {
         MenuBarExtra {
